@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-login-container">
+        <div class="login-card">
+            <!-- Website Name Section -->
+            <div class="website-name">
+                <h1>Attendance Manager</h1>
+            </div>
+
+            <!-- Login Form -->
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Add JavaScript functionality for login
+        document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Example validation (customize as needed)
+            if (username === "admin" && password === "password123") {
+                alert("Login successful!");
+                window.location.href = "dashboard.html"; // Redirect to the dashboard page
+            } else {
+                alert("Invalid username or password!");
+            }
+        });
+    </script>
+</body>
+</html>
